@@ -1,0 +1,6 @@
+curl -X POST 'http://keycloak.local:8181/realms/MySuperApplicationRealm/protocol/openid-connect/token'
+    -H 'Content-Type: application/x-www-form-urlencoded' \
+    -d 'grant_type=password' \
+    -d 'client_id=my-super-client' \
+    -d 'username=user2' \
+    -d 'password=123456'
