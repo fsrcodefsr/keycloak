@@ -2,5 +2,26 @@ curl -X POST 'http://keycloak.local:8181/realms/MySuperApplicationRealm/protocol
     -H 'Content-Type: application/x-www-form-urlencoded' \
     -d 'grant_type=password' \
     -d 'client_id=my-super-client' \
+    -d 'username=user1' \
+    -d 'password=123456'
+
+###
+curl -X POST 'http://keycloak.local:8181/realms/MySuperApplicationRealm/protocol/openid-connect/token'
+    -H 'Content-Type: application/x-www-form-urlencoded' \
+    -d 'grant_type=password' \
+    -d 'client_id=my-super-client' \
     -d 'username=user2' \
     -d 'password=123456'
+
+###
+curl -X POST 'http://keycloak.local:8181/realms/MySuperApplicationRealm/protocol/openid-connect/token'
+    -H 'Content-Type: application/x-www-form-urlencoded' \
+    -d 'grant_type=password' \
+    -d 'client_id=my-super-client' \
+    -d 'username=user3' \
+    -d 'password=123456'
+
+###
+GET http://localhost:8080/api/hello
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJJZ0tOSTJ3T3hISnNrelNwVmNCbDNDSHlSVWFWdmJqM3V6bjFnSmxYWW1jIn0.eyJleHAiOjE3MjExMzE3NDMsImlhdCI6MTcyMTEzMTQ0MywianRpIjoiYzAyYzMyYWItY2I4NS00YTI1LTk5MDQtNTFhMTY1NTI5Y2Q4IiwiaXNzIjoiaHR0cDovL2tleWNsb2FrLmxvY2FsOjgxODEvcmVhbG1zL015U3VwZXJBcHBsaWNhdGlvblJlYWxtIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImQ1NWRiNDE4LTRhMjctNGZlNS04OWM0LTQ4YmNjYmNlMGU2MCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im15LXN1cGVyLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiJlMzZkYmNlZC0yOTVlLTQ1N2ItYjJlOC0yZWFjZGQ0ZmIxOGIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJhcHBfdXNlciIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iLCJkZWZhdWx0LXJvbGVzLW15c3VwZXJhcHBsaWNhdGlvbnJlYWxtIiwiYXBwX2FkbWluIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsibXktc3VwZXItY2xpZW50Ijp7InJvbGVzIjpbImFkbWluIiwidXNlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiZTM2ZGJjZWQtMjk1ZS00NTdiLWIyZTgtMmVhY2RkNGZiMThiIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIzIiwiZW1haWwiOiJ1c2VyM0BteWFwcGxpY2F0aW9uLmNvbSJ9.nGJ3QZZkyafG3SAn7w81S4gj2_EsBeeZ4c6gw-nY_OhWEkp62z66X5IOlEYV8cnxpcC7v5Q1ivrhnIWoOyQ10xy70wFXTc6A7bo3s9TwjwdIXm907AQzgTmRpzKBJ33i--4HXqOswPjY4fkUOcxBetSKpx7SoYmVWGl5w1rlzhAqbCHkMb3dS_aVR0wm7C0MwAiT0QYoMdczlIfPEj26JKSFlsqVk1K4F17K31ZgB6uRaNC5FOHvvYYOaMlPySJSn__mjYyKk_dKgpzD7I4Ugg-8f0nq7TZXi-nepWMNZCqrDe5t2A40Kq_7K9wlaOvpXILE_mzEv8EY4Tnvj1K5Sg
+
